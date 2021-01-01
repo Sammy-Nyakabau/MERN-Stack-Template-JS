@@ -1,4 +1,4 @@
-const logger = require("../config/logger");
+const logger = require("../startup/logger");
 const chalk = require("chalk");
 const debug = require("debug")("app:error");
 
