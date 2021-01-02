@@ -19,8 +19,8 @@ module.exports = function () {
       console.info(chalk.blue("Connected to database"));
     })
     .catch((err) => {
-      debug(err.message);
+      debug(err.message[0]);
       logger.error(err.message);
-      console.log(chalk.red(err.message));
+      console.log(chalk.red(err.message[0]));
     });
 };
