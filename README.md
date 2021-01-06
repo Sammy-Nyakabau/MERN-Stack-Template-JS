@@ -22,6 +22,12 @@ Make sure to follow all these steps exactly as explained below. Do not miss any 
 
 ```env
   MONGO=your mongodb uri
+  SESSION_SECRET=your express session secret
+  GOOGLE_CLIENT_ID=your google client id
+  GOOGLE_CLIENT_SECRET=your google client secret
+  FACEBOOK_APP_ID=your facebook app id
+  FACEBOOK_APP_SECRET=your facebook app secret
+  CLIENT_HOME=your frontend uri
 ```
 - Create a .env file in then `/frontend` folder and add the following
 
@@ -39,6 +45,14 @@ Next, from the root folder, install the dependencies:
     npm install
 
 
+### ✅ Run the tests
+    
+    cd backend
+    npm test
+
+    cd frontend
+    npm test
+
 ### 🚀 Start the Server and the App 
 
     cd backend
@@ -46,6 +60,96 @@ Next, from the root folder, install the dependencies:
 
     cd frontend
     npm start
+
+## :open_file_folder: Directory Structure
+
+```bash
+  .
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── backend
+│   ├── components
+│   │   ├── feature
+│   │   │   ├── feature.test.js
+│   │   │   ├── featureController.js
+│   │   │   ├── featureModel.js
+│   │   │   └── featureRouter.js
+│   │   └── user
+│   │       ├── user.test.js
+│   │       ├── userController.js
+│   │       ├── userModel.js
+│   │       └── userRouter.js
+│   ├── index.js
+│   ├── middleware
+│   │   ├── async.js
+│   │   ├── auth.js
+│   │   ├── error.js
+│   │   ├── validate.js
+│   │   └── validateObjectIds.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── startup
+│       ├── cors.js
+│       ├── db.js
+│       ├── helmet.js
+│       ├── logger.js
+│       ├── passport.js
+│       ├── routes.js
+│       └── validation.js
+└── frontend
+    ├── package-lock.json
+    ├── package.json
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    └── src
+        ├── App.css
+        ├── App.js
+        ├── components
+        │   ├── Feature
+        │   │   ├── Feature.css
+        │   │   ├── Feature.jsx
+        │   │   └── index.js
+        │   ├── Login
+        │   │   ├── Login.css
+        │   │   ├── Login.jsx
+        │   │   └── index.js
+        │   └── common
+        │       ├── ProtectedRoutes.jsx
+        │       └── ScrollToTop.jsx
+        ├── index.css
+        ├── index.js
+        ├── screens
+        │   └── Home
+        │       ├── Home.css
+        │       ├── Home.jsx
+        │       └── index.js
+        ├── services
+        │   ├── authService.js
+        │   ├── httpService.js
+        │   └── userService.js
+        └── store
+            ├── api.js
+            ├── configureStore.js
+            ├── entities.js
+            ├── feature.js
+            ├── middleware
+            │   ├── api.js
+            │   ├── func.js
+            │   ├── logger.js
+            │   └── toast.js
+            ├── reducer.js
+            ├── tests
+            │   ├── feature.spec.js
+            │   └── user.spec.js
+            └── user.js
+```
+
 
 ## Author
 
