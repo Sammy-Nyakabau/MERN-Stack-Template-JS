@@ -1,12 +1,13 @@
 /* eslint-disable */
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify"
+
 import { login, register } from "../services/authService";
-import { useStateValue } from "../reducer/StateProvider";
-import "../styles/Login.css";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import Google from "@material-ui/icons/Google";
+
+import "../styles/Login.css";
 
 function Login() {
   const history = useHistory();
@@ -36,7 +37,6 @@ function Login() {
       }
     } catch (ex) {
       if (ex.response && ex.response.status >= 400) {
-        console.log("error");
         toast.error("Invalid Password/Username!");
       }
     }
@@ -56,7 +56,6 @@ function Login() {
       toast.success(`Logged In as ${user.username}`);
     } catch (ex) {
       if (ex.response && ex.response.status >= 400) {
-        console.log("error");
         toast.error("Invalid Password/Username!");
       }
     }
@@ -91,7 +90,7 @@ function Login() {
         </button>
       </form>
       <div className="socials">
-        <a href="http://localhost:5000/api/users/auth/google">
+        <a href={`${process.env.REACT_APP_API_URL}/users/auth/google`}>
           <Google
             type="submit"
             style={{ cursor: "pointer", color: "black" }}
@@ -99,7 +98,7 @@ function Login() {
           />
         </a>
 
-        <a href="http://localhost:5000/api/users/auth/facebook">
+        <a href={`${process.env.REACT_APP_API_URL}/users/auth/faceboook`}>
           <FacebookIcon
             type="submit"
             classname="login_FacebookButton"
@@ -107,11 +106,12 @@ function Login() {
           />
         </a>
       </div>
-      <p className="login_conditions">
-      </p>
+      <p className="login_conditions"></p>
       <Link to="/register">
-        <button className="login__registerButton" onClick={createAccount}>
-        </button>
+        <button
+          className="login__registerButton"
+          onClick={createAccount}
+        ></button>
       </Link>
     </div>
   );
