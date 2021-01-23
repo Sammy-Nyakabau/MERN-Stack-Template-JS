@@ -64,7 +64,7 @@ Next, from the root folder, install the dependencies:
 ## :open_file_folder: Directory Structure
 
 ```bash
-  .
+ .
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
@@ -108,31 +108,52 @@ Next, from the root folder, install the dependencies:
     │   ├── manifest.json
     │   └── robots.txt
     └── src
-        ├── App.css
-        ├── App.js
         ├── components
+        │   ├── App
+        │   │   ├── App.css
+        │   │   ├── App.js
+        │   │   └── test.js
         │   ├── Feature
         │   │   ├── Feature.css
         │   │   ├── Feature.jsx
-        │   │   └── index.js
+        │   │   ├── index.js
+        │   │   └── test.js
         │   ├── Login
         │   │   ├── Login.css
         │   │   ├── Login.jsx
-        │   │   └── index.js
-        │   └── common
+        │   │   ├── index.js
+        │   │   └── test.js
+        │   └── shared
         │       ├── ProtectedRoutes.jsx
         │       └── ScrollToTop.jsx
+        ├── hooks
+        │   └── useSemiPersistantState
+        │       └── index.js
         ├── index.css
         ├── index.js
         ├── screens
         │   └── Home
         │       ├── Home.css
         │       ├── Home.jsx
-        │       └── index.js
+        │       ├── index.js
+        │       └── test.js
         ├── services
-        │   ├── authService.js
-        │   ├── httpService.js
-        │   └── userService.js
+        │   ├── authService
+        │   │   ├── index.js
+        │   │   └── test.js
+        │   ├── formatService
+        │   │   ├── Currency
+        │   │   │   ├── index.js
+        │   │   │   └── test.js
+        │   │   └── Date
+        │   │       ├── index.js
+        │   │       └── test.js
+        │   ├── httpService
+        │   │   ├── index.js
+        │   │   └── test.js
+        │   └── userService
+        │       ├── index.js
+        │       └── test.js
         └── store
             ├── api.js
             ├── configureStore.js
@@ -148,6 +169,7 @@ Next, from the root folder, install the dependencies:
             │   ├── feature.spec.js
             │   └── user.spec.js
             └── user.js
+
 ```
 
 
