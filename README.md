@@ -151,6 +151,8 @@ Next, from the root folder, install the dependencies:
         │   ├── httpService
         │   │   ├── index.js
         │   │   └── test.js
+        │   ├── logService
+        │   │   └── index.js
         │   └── userService
         │       ├── index.js
         │       └── test.js
