@@ -127,6 +127,8 @@ Next, from the root folder, install the dependencies:
         │       ├── ProtectedRoutes.jsx
         │       └── ScrollToTop.jsx
         ├── hooks
+        │   ├── useDocumentTitle
+        │   │   └── index.js
         │   └── useSemiPersistantState
         │       └── index.js
         ├── index.css
@@ -171,7 +173,6 @@ Next, from the root folder, install the dependencies:
             │   ├── feature.spec.js
             │   └── user.spec.js
             └── user.js
-
 ```
 
 
