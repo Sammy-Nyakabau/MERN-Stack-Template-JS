@@ -126,6 +126,10 @@ Next, from the root folder, install the dependencies:
         │   └── shared
         │       ├── ProtectedRoutes.jsx
         │       └── ScrollToTop.jsx
+        ├── hoc
+        │   └── withToolTip
+        │       ├── index.js
+        │       └── withToolTip.jsx
         ├── hooks
         │   ├── useDocumentTitle
         │   │   └── index.js
