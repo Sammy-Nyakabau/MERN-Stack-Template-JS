@@ -1,4 +1,4 @@
-import { init, captureMessage } from "@sentry/browser";
+import { init, captureMessage } from "@sentry/react";
 
 const init = () => {
   init({
