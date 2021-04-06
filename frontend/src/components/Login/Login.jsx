@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify"
 
-import { login, register } from "../services/authService";
+import { login, register } from "@services/authService";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import Google from "@material-ui/icons/Google";
 
-import "../styles/Login.css";
+import "@styles/Login.css";
 
 function Login() {
   const history = useHistory();

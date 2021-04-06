@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loadFeature } from "../store/feature";
+import { loadFeature } from "@store/feature";
 
 const Feature = () => {
   const dispatch = useDispatch();
